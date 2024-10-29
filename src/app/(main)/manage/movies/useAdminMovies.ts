@@ -28,11 +28,7 @@ export const useAdminMovies = () => {
 					id: movie.id,
 					viewUrl: PUBLIC_URL.movie(movie.slug),
 					editUrl: ADMIN_URL.movieEdit(movie.id),
-					items: [
-						movie.title,
-						getGenresList(movie.genres),
-						String(movie.views / 2)
-					]
+					items: [movie.title, getGenresList(movie.genres), String(movie.views)]
 				})
 			)
 	})
